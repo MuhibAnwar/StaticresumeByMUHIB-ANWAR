@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <form id="resume-form">
+        <h2>Build Your Resume</h2>
+        <fieldset id="feild0"><legend id="legend0">Personal Details</legend>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="file" id="profile-picture" accept="image/*">
+        </fieldset>
+
+        <fieldset id="resume-form0"><legend>Education</legend>
+            <h3>Education</h3>
+            <div id="education-container"></div>
+            <button type="button" id="add-education">Add Education</button>
+        </fieldset>
+
+        <fieldset><legend>Skills</legend>
+            <h3>Skills</h3>
+            <div id="skills-container"></div>
+            <button type="button" id="add-skill">Add Skill</button>
+        </fieldset>
+
+        <fieldset><legend>Experience</legend>
+            <h3>Experience</h3>
+            <div id="experience-container"></div>
+            <button type="button" id="add-experience">Add Experience</button>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <!-- Buttons for PDF Download and Shareable Link -->
+    <button id="downloadButton" style="display: none;">Download Resume as PDF</button>
+    <div id="shareableLink" style="display: none;">
+        <p>Shareable link: <a id="resume-link" href="#" target="_blank">Share your resume</a></p>
+    </div>
+    <button id="toggle-edit">Edit</button>
+
+
+    <!-- Resume output area -->
+    <div id="resume-output"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+</body>
+</html>
